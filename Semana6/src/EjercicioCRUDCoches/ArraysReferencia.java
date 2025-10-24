@@ -37,7 +37,7 @@ public class ArraysReferencia {
             System.out.println("2. Eliminar coche");
             System.out.println("3. Modificar coche");
             System.out.println("4. Listar coches");
-            System.out.println("5. Salir");1
+            System.out.println("5. Salir");
             opcion = readInt("Ingrese una opción: ");
             
             switch (opcion) {
