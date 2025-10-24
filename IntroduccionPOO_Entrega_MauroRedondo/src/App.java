@@ -1,6 +1,10 @@
-package modelo;
+
 
 import static com.coti.tools.Esdia.*;
+
+import modelo.Director;
+import modelo.Pelicula;
+import modelo.Videoteca;
 
 //Lo que aparece en pantalla y que manipula el cliente
 public class App {
