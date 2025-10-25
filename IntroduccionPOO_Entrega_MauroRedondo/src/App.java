@@ -38,7 +38,7 @@ public class App {
                     break;
 
                 case 5:
-                    opcionSalir(); 
+                    opcionSalir();
                     salir = true;
                     break;
             }
@@ -48,17 +48,18 @@ public class App {
     }
 
     private static void mostrarMenu() {
-        System.out.println("+--------------------------------------+");
-        System.out.println("|           MI VIDEOTECA               |");
-        System.out.println("+--------------------------------------+");
-        System.out.println("1) Nueva videoteca de películas");
-        System.out.println("2) Configurar velocidad de reproducción");
-        System.out.println("3) Añadir una nueva película a la videoteca");
-        System.out.println("4) Mostrar información actual de películas");
-        System.out.println("5) Salir (se borrará toda la información)");
+        System.out.println("|---------------------------------------------|");
+        System.out.println("|                 MI VIDEOTECA                |");
+        System.out.println("|---------------------------------------------|");
+        System.out.println("| 1) Nueva videoteca de películas             |");
+        System.out.println("| 2) Configurar velocidad de reproducción.    |");
+        System.out.println("| 3) Añadir una nueva película a la videoteca |");
+        System.out.println("| 4) Mostrar información actual de películas  |");
+        System.out.println("| 5) Salir (se borrará toda la información)   |");
+        System.out.println("|---------------------------------------------|");
     }
 
-    //Opción 1, 
+    //Opción 1,
     private static void opcionCrearNuevaVideoteca() {
         System.out.println("Creando nueva videoteca...");
 
@@ -119,12 +120,7 @@ public class App {
             System.out.println("Primero debes crear una videoteca (opción 1).");
             return;
         }
-
-        System.out.println("\n=== INFORMACIÓN ACTUAL ===");
-        System.out.printf("Velocidad de reproducción actual: %.2fx%n", videoteca.getVelocidad());
-        System.out.printf("Capacidad total: %d%n", videoteca.capacidad());
-        System.out.printf("Películas almacenadas: %d%n%n", videoteca.numPeliculas());
-
+        
         videoteca.mostrarPeliculas();
     }
 

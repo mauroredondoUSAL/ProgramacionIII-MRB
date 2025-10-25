@@ -4,7 +4,8 @@ public class Videoteca {
     private Pelicula[] peliculas;
     private int numPeliculas;
     private double velocidad;
-    
+
+
     public Videoteca() {
         this.peliculas = null;
         this.numPeliculas = 0;
@@ -58,15 +59,52 @@ public class Videoteca {
 
     
     public void mostrarPeliculas() {
-        if (peliculas == null) {
-            System.out.println("No hay videoteca creada.");
+        if (peliculas == null || numPeliculas == 0) {
+            System.out.println("No hay películas en la videoteca.");
             return;
         }
+
+        String separador = "|-----------------------------------------------------------------------------------------------------------------------------------------------|";
+        System.out.println(separador);
+        System.out.printf("|  %-140s |\n","PELÍCULAS EN LA VIDEOTECA" );
+        System.out.println(separador);
+        System.out.printf("| %-30s | %-12s | %-20s | %-13s | %-15s | %-23s | %-10s |\n",
+                "Título", "Año Estreno", "Director", "Oscar ganado", "Duración (min)", "Tiempo visionado (min)", "Valoración");
+        System.out.println(separador);
+
+        double sumaValoracion = 0;
+        double sumaVisionado = 0;
+        int peliculasContadas = 0;
         for (int i = 0; i < peliculas.length; i++) {
-            if (peliculas[i] != null) {
-                System.out.printf("%d) %s%n", i + 1, peliculas[i].infoPelicula());
+            Pelicula p = peliculas[i];
+            if (p != null) {
+                String director = "";
+                String oscar = "";
+                try {
+                    director = p.getDirector().getNombre() + " " + p.getDirector().getApellidos();
+                    oscar = p.getDirector().esOscarGanado() ? "Sí" : "No";
+                } catch (Exception e) {
+                    director = "-";
+                    oscar = "-";
+                }
+                double tiempoVisionado = 0;
+                try {
+                    tiempoVisionado = p.getDuracionMin() / this.velocidad;
+                } catch (Exception e) {
+                    tiempoVisionado = 0;
+                }
+                sumaVisionado += tiempoVisionado;
+                sumaValoracion += p.getValoracion();
+                peliculasContadas++;
+
+                System.out.printf("| %-30s | %-12d | %-20s | %-13s | %-15d | %-23.2f | %-10.2f |\n",
+                        p.getTitulo(), p.getAnoEstreno(), director, oscar, p.getDuracionMin(), tiempoVisionado, p.getValoracion());
             }
         }
+    System.out.println(separador);
+    System.out.printf("| Tiempo de visionado total de la videoteca: %-8.2f min %-85s |\n", sumaVisionado, "");
+    System.out.printf("| Valoración total de la videoteca: %-8.2f %-98s |\n", (peliculasContadas > 0 ? sumaValoracion / peliculasContadas : 0), "");
+    System.out.println(separador);
     }
 
     
