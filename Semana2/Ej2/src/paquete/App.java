@@ -1,10 +1,9 @@
 package paquete;
 import java.io.Console;
-import java.util.Scanner;
 
 public class App {
     public static void main(String[] args) throws Exception {
-       Scanner scanner = new Scanner(System.in);
+       
         Console console = System.console();
 
        String nacimientoString=console.readLine("Indica tu año de nacimiento: ");
