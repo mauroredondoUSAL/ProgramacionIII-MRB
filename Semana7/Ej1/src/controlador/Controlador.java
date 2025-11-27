@@ -9,7 +9,7 @@ public class Controlador {
     public Controlador(Vista vista, Modelo modelo){
         this.modelo = modelo;
         this.vista = vista;
-    } 
+    }
 
     public void init(){
         vista.mostrarMenu();

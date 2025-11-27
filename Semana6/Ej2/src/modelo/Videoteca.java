@@ -12,9 +12,6 @@ public class Videoteca {
         this.velocidad = 1.0;
     }
 
-    // -----------------------------------------------------------------------
-    // CREATE: inicializar videoteca (ya no depende de tamaño)
-    // -----------------------------------------------------------------------
     public void crearNuevaVideoteca(int tamanyoIgnorado) {
         this.peliculas = new ArrayList<>();
         System.out.println("Nueva videoteca creada (sin límite de capacidad).");
@@ -47,9 +44,6 @@ public class Videoteca {
         this.velocidad = velocidad;
     }
 
-    // -----------------------------------------------------------------------
-    // CREATE: añadir película
-    // -----------------------------------------------------------------------
     public boolean anadirPelicula(Pelicula p) {
         if (peliculas == null) {
             System.out.println("Primero debes crear una videoteca (opción 1).");
@@ -59,9 +53,6 @@ public class Videoteca {
         return true;
     }
 
-    // -----------------------------------------------------------------------
-    // READ: mostrar todas las películas
-    // -----------------------------------------------------------------------
     public void mostrarPeliculas() {
         if (peliculas == null || peliculas.isEmpty()) {
             System.out.println("No hay películas en la videoteca.");
@@ -100,9 +91,6 @@ public class Videoteca {
         System.out.println(separador);
     }
 
-    // -----------------------------------------------------------------------
-    // UPDATE: modificar una película por índice
-    // -----------------------------------------------------------------------
     public Pelicula getPelicula(int index) {
         if (peliculas == null || index < 0 || index >= peliculas.size()) return null;
         return peliculas.get(index);
@@ -114,9 +102,6 @@ public class Videoteca {
         return true;
     }
 
-    // -----------------------------------------------------------------------
-    // DELETE: eliminar película por índice
-    // -----------------------------------------------------------------------
     public boolean eliminarPelicula(int index) {
         if (peliculas == null || index < 0 || index >= peliculas.size()) return false;
         peliculas.remove(index);

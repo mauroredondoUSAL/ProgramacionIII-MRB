@@ -18,13 +18,25 @@ public class App {
             int opcion = readInt("Seleccione una opción: ", 1, 7);
 
             switch (opcion) {
-                case 1 -> opcionCrearNuevaVideoteca();
-                case 2 -> opcionConfigurarVelocidad();
-                case 3 -> opcionAnadirPelicula();
-                case 4 -> opcionMostrarInformacion();
-                case 5 -> opcionEditarPelicula();
-                case 6 -> opcionEliminarPelicula();
-                case 7 -> {
+                case 1:
+                    opcionCrearNuevaVideoteca();
+                    break;
+                case 2:
+                    opcionConfigurarVelocidad();
+                    break;
+                case 3:
+                    opcionAnadirPelicula();
+                    break;
+                case 4:
+                    opcionMostrarInformacion();
+                    break;
+                case 5:
+                    opcionEditarPelicula();
+                    break;
+                case 6:
+                    opcionEliminarPelicula();
+                    break;
+                case 7:{
                     opcionSalir();
                     salir = true;
                 }
@@ -86,8 +98,8 @@ public class App {
         Director dir = new Director(nombre, apellidos, oscar);
 
         int duracionMin = readInt("Duración (min): ", 1, 1000);
-        int ano = readInt("Año de estreno (1900–2100): ", 1900, 2100);
-        double valoracion = readDouble("Valoración (0–10): ", 0.0, 10.0);
+        int ano = readInt("Año de estreno (1900-2100): ", 1900, 2100);
+        double valoracion = readDouble("Valoración (0-10): ", 0.0, 10.0);
 
         Pelicula p = new Pelicula(dir, titulo, ano, duracionMin, valoracion);
 
@@ -105,7 +117,7 @@ public class App {
         videoteca.mostrarPeliculas();
     }
 
-    // OPCIÓN 5 – UPDATE
+    // OPCIÓN 5
     private static void opcionEditarPelicula() {
         if (!videoteca.estaInicializada() || videoteca.numPeliculas() == 0) {
             System.out.println("No hay películas que editar.");
@@ -140,7 +152,7 @@ public class App {
         System.out.println("Película actualizada.");
     }
 
-    // OPCIÓN 6 – DELETE
+    // OPCIÓN 6
     private static void opcionEliminarPelicula() {
         if (!videoteca.estaInicializada() || videoteca.numPeliculas() == 0) {
             System.out.println("No hay películas que eliminar.");
