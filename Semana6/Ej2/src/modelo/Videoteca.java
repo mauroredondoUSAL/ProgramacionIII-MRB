@@ -12,6 +12,7 @@ public class Videoteca {
         this.velocidad = 1.0;
     }
 
+    //Crear
     public void crearNuevaVideoteca(int tamanyoIgnorado) {
         this.peliculas = new ArrayList<>();
         System.out.println("Nueva videoteca creada (sin límite de capacidad).");
@@ -26,13 +27,10 @@ public class Videoteca {
     }
 
     public int capacidad() {
-        // ahora no existe límite, devolvemos -1 para indicar "ilimitado"
+        //devolvemos -1 para indicar "ilimitado"
         return peliculas == null ? 0 : -1;
     }
 
-    // -----------------------------------------------------------------------
-    // CONFIGURAR VELOCIDAD
-    // -----------------------------------------------------------------------
     public double getVelocidad() {
         return velocidad;
     }
@@ -44,6 +42,7 @@ public class Videoteca {
         this.velocidad = velocidad;
     }
 
+    //Añadir película
     public boolean anadirPelicula(Pelicula p) {
         if (peliculas == null) {
             System.out.println("Primero debes crear una videoteca (opción 1).");
@@ -53,6 +52,7 @@ public class Videoteca {
         return true;
     }
 
+    //Mostrar
     public void mostrarPeliculas() {
         if (peliculas == null || peliculas.isEmpty()) {
             System.out.println("No hay películas en la videoteca.");
@@ -91,6 +91,7 @@ public class Videoteca {
         System.out.println(separador);
     }
 
+    // Modificar película
     public Pelicula getPelicula(int index) {
         if (peliculas == null || index < 0 || index >= peliculas.size()) return null;
         return peliculas.get(index);
@@ -102,13 +103,13 @@ public class Videoteca {
         return true;
     }
 
+    // Eliminar película
     public boolean eliminarPelicula(int index) {
         if (peliculas == null || index < 0 || index >= peliculas.size()) return false;
         peliculas.remove(index);
         return true;
     }
 
-    // Para permitir iteración desde App
     public ArrayList<Pelicula> getPeliculas() {
         return peliculas;
     }

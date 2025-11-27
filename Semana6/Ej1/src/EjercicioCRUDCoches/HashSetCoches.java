@@ -5,22 +5,22 @@ import java.util.HashSet;
 
 /**
  *
- * 
+ *
  * Ejercicio CRUD Collections. (Con la colección HashSet)
- * 
+ *
  * Este ejemplo muestra como hacer en un CRUD en un HashSet con sus
  * peculiaridades.
- * 
+ *
  * Al decir que no existan dos objetos iguales, es necesario abordar
  * el tema referente a como definir cuando dos objetos son iguales.
- * 
- * 
+ *
+ *
  * No se sigue ningún patrón arquitectónico en este ejercicio.
- * 
+ *
  * Se realiza todo en la misma clase para mayor claridad, sin embargo
  * esto se aplica a las colecciones que residan en cualquier otro objeto del programa.
- * 
- * 
+ *
+ *
  * @author Loza
  */
 public class HashSetCoches {
