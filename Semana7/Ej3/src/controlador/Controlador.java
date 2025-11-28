@@ -37,7 +37,6 @@ public class Controlador {
         System.out.println("Programa finalizado.");
     }
 
-    // ------ MÉTODOS ACCESIBLES DESDE LA VISTA ------
 
     public void crearVideoteca() {
         modelo.crearNuevaVideoteca();
@@ -85,8 +84,6 @@ public class Controlador {
         Pelicula actual = modelo.getPelicula(index);
         if (actual == null) return;
 
-        // Este método podría delegarse a Vista para pedir campos,
-        // pero por simplicidad lo dejo aquí en modo texto.
         System.out.println("Editar película NO implementado completamente (puedo hacerlo si quieres).");
     }
 

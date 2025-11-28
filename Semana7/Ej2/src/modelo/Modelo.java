@@ -2,7 +2,7 @@ package modelo;
 
 public class Modelo {
 
-    private int[][] ventas;   // 5 almacenes × 2 productos
+    private int[][] ventas;   // 5 almacenes y 2 productos
     private float[] precios;  // precio de cada producto
 
     private float ingresosTotales;
