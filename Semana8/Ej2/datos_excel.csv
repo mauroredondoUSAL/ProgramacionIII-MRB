@@ -1,0 +1,16 @@
+Concepto;Fecha;Base;IVA;Total;Cliente
+Venta de Equipos;2023-10-01;1500,00;0,21;1724,25;Juan Pérez
+Consultoría IT;2023-09-15;3000,00;0,21;3267,00;María Gómez
+Mantenimiento Servidores;2023-11-10;2000,00;0,21;2420,00;Luis Martín
+Desarrollo de Software;2023-08-20;5000,00;0,21;5142,50;Ana López
+Licencias de Software;2023-07-05;1200,00;0,21;1350,36;Pedro Ruiz
+Soporte Técnico;2023-09-30;800,00;0,21;919,60;Carmen Fernández
+Venta de Periféricos;2023-10-25;600,00;0,21;704,22;Javier Sánchez
+Servicio de Hosting;2023-11-01;1000,00;0,21;1210,00;Lucía Romero
+Renovación de Licencias;2023-12-12;900,00;0,21;1001,88;Miguel Torres
+Consultoría de Seguridad;2023-09-18;2500,00;0,21;2662,00;Isabel Domínguez
+Formación de Personal;2023-08-01;1800,00;0,21;1960,20;Alberto Gil
+Auditoría de Sistemas;2023-11-20;4000,00;0,21;4549,60;Laura Castro
+Venta de Monitores;2023-10-12;2200,00;0,21;2555,52;Rafael Navarro
+Migración de Datos;2023-09-25;3500,00;0,21;3853,85;Elena Serrano
+Consultoría en Cloud;2023-07-30;2800,00;0,21;3015,32;Victor Morales
