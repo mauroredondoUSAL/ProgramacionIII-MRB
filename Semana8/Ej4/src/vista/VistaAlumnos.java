@@ -81,9 +81,9 @@ public class VistaAlumnos {
     private void exportarDirecciones() {
         String nombre = Esdia.readString("Nombre del archivo para Direcciones: ");
         if (controlador.exportarDirecciones(nombre)) {
-            System.out.println("✅ Exportado correctamente.");
+            System.out.println("Exportado correctamente.");
         } else {
-            System.out.println("❌ Error al exportar.");
+            System.out.println("Error al exportar.");
         }
     }
 }
