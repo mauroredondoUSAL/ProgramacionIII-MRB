@@ -31,7 +31,7 @@ public class VistaPersonas {
                     mostrarTabla();
                     break;
                 case "q":
-                    // Requisito: Confirmar salida
+                    // Confirmar salida
                     String confirmacion = Esdia.readString("¿Seguro que quieres salir? (s/n): ");
                     if (confirmacion.equalsIgnoreCase("s")) {
                         salir = true;
